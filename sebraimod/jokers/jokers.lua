@@ -92,10 +92,15 @@ SMODS.Atlas({
     px = 71,
     py = 95
 })
-
+SMODS.Atlas({
+    key ="seb_double_trouble",
+    path ="double_trouble.png",
+    px = 71,
+    py = 95
+})
 
 SMODS.Joker{
-    key = "sample_wee",                                  --name used by the joker.    
+    key = "double_trouble",                                  --name used by the joker.    
     config = { extra = { chips = 1, x_chip = 2 } },    --variables used for abilities and effects.
     pos = { x = 0, y = 0 },                              --pos in spritesheet 0,0 for single sprites or the first sprite in the spritesheet.
     rarity = 1,                                          --rarity 1=common, 2=uncommen, 3=rare, 4=legendary
@@ -106,7 +111,7 @@ SMODS.Joker{
     discovered = true,                                   --is joker discovered by default.    
     effect=nil,                                          --you can specify an effect here eg. 'Mult'
     soul_pos=nil,                                        --pos of a soul sprite.
-    atlas = 'sample_wee',                                --atlas name, single sprites are deprecated.
+    atlas = 'double_trouble',                                --atlas name, single sprites are deprecated.
 
     calculate = function(self,card,context)              --define calculate functions here
         if context.individual and context.cardarea == G.play then -- if we are in card scoring phase, and we are on individual cards

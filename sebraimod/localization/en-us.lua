@@ -1,10 +1,10 @@
 return {
     descriptions = {
         Joker = {
-            j_seb_sample_wee = {
+            j_seb_double_trouble = {
                 name = "double trouble",
                 text = {
-                    "This Joker doubles chips when a",
+                    "doubles this joker {c:chips}chips when a",
                     "played {C:attention}2{} is scored",
                     "{C:inactive}(Currently {C:chips}+#1#{C:inactive} Chips)",
                 },
