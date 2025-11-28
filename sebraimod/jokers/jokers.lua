@@ -96,7 +96,7 @@ SMODS.Atlas({
 
 SMODS.Joker{
     key = "sample_wee",                                  --name used by the joker.    
-    config = { extra = { chips = 8, chip_mod = 2 } },    --variables used for abilities and effects.
+    config = { extra = { chips = 1, x_chip = 2 } },    --variables used for abilities and effects.
     pos = { x = 0, y = 0 },                              --pos in spritesheet 0,0 for single sprites or the first sprite in the spritesheet.
     rarity = 1,                                          --rarity 1=common, 2=uncommen, 3=rare, 4=legendary
     cost = 1,                                            --cost to buy the joker in shops.
@@ -112,7 +112,7 @@ SMODS.Joker{
         if context.individual and context.cardarea == G.play then -- if we are in card scoring phase, and we are on individual cards
             if not context.blueprint then -- blueprint/brainstorm don't get to add chips to themselves
                 if context.other_card:get_id() == 2 then -- played card is a 2 by rank
-                    card.ability.extra.chips = card.ability.extra.chips + card.ability.extra.chip_mod -- add configurable amount of chips to joker
+                    card.ability.extra.chips = card.ability.extra.chips * card.ability.extra.x_chip -- add configurable amount of chips to joker
                     
                     return {                             -- shows a message under the specified card (card) when it triggers, k_upgrade_ex is a key in the localization files of Balatro
                         extra = {focus = card, message = localize('k_upgrade_ex')},
@@ -131,7 +131,7 @@ SMODS.Joker{
     end,
 
     loc_vars = function(self, info_queue, card)          --defines variables to use in the UI. you can use #1# for example to show the chips variable
-        return { vars = { card.ability.extra.chips, card.ability.extra.chip_mod }, key = self.key }
+        return { vars = { card.ability.extra.chips, card.ability.extra.x_chip }, key = self.key }
     end
 }
 

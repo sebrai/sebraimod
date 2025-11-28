@@ -1,16 +1,15 @@
 return {
     descriptions = {
         Joker = {
-            j_sj_sample_wee = {
-                name = "Sample Wee",
+            j_seb_sample_wee = {
+                name = "double trouble",
                 text = {
-                    "This Joker gains",
-                    "{C:chips}+#2#{} Chips when each",
+                    "This Joker doubles chips when a",
                     "played {C:attention}2{} is scored",
                     "{C:inactive}(Currently {C:chips}+#1#{C:inactive} Chips)",
                 },
             },
-            j_sj_sample_obelisk = {
+            j_seb_sample_obelisk = {
                 name = "Sample Obelisk",
                 text = {
                     {
@@ -19,7 +18,7 @@ return {
                     }
                 },
             },
-            j_sj_sample_specifichand = {
+            j_seb_sample_specifichand = {
                 name = "Sample Specific Hand",
                 text = {
                     {
@@ -28,7 +27,7 @@ return {
                     }
                 },
             },
-            j_sj_sample_money = {
+            j_seb_sample_money = {
                 name = "Sample Money",
                 text = {
                     {
@@ -42,7 +41,7 @@ return {
                     }
                 },
             },
-            j_sj_sample_roomba = {
+            j_seb_sample_roomba = {
                 name = "Sample Roomba",
                 text = {
                     {
@@ -53,7 +52,7 @@ return {
                     }
                 },
             },
-            j_sj_sample_drunk_juggler = {
+            j_seb_sample_drunk_juggler = {
                 name = "Sample Drunk Juggler",
                 text = {
                     {
@@ -64,7 +63,7 @@ return {
                     }
                 },
             },
-            j_sj_sample_hackerman = {
+            j_seb_sample_hackerman = {
                 name = "Sample Hackerman",
                 text = {
                     {
@@ -74,7 +73,7 @@ return {
                     }
                 },
             },
-            j_sj_sample_baroness = {
+            j_seb_sample_baroness = {
                 name = "Sample Baroness",
                 text = {
                     {
@@ -84,7 +83,7 @@ return {
                     }
                 },
             },
-            j_sj_sample_rarebaseballcard = {
+            j_seb_sample_rarebaseballcard = {
                 name = "Sample Rare Baseball Card",
                 text = {
                     {
@@ -93,7 +92,7 @@ return {
                     }
                 },
             },
-            j_sj_sample_multieffect = {
+            j_seb_sample_multieffect = {
                 name = "Sample Multi-Effect",
                 text = {
                     {
