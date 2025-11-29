@@ -9,6 +9,13 @@ return {
                     "{C:inactive}(Currently {C:chips}+#1#{C:inactive} Chips)",
                 },
             },
+            j_seb_switcheroo = {
+                name ="switcheroo",
+                text = {
+                    "swap current {C:chips}chips and {C:mult}mult",
+                    "{C:inactive}(#1#)"
+                },
+            },            
             j_seb_sample_obelisk = {
                 name = "Sample Obelisk",
                 text = {
