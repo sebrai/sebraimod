@@ -4,7 +4,7 @@ return {
             j_seb_double_trouble = {
                 name = "double trouble",
                 text = {
-                    "multiplies this jokers chips by {C:chips}#2# when a",
+                    "multiplies this jokers chips by {C:chips}#2#{} when a",
                     "played {C:attention}2{} is scored",
                     "{C:inactive}(Currently {C:chips}+#1#{C:inactive} Chips)",
                 },
@@ -12,8 +12,8 @@ return {
             j_seb_switcheroo = {
                 name ="switcheroo",
                 text = {
-                    "all playing {C:attention}cards +{C:chips}chips",
-                    "is now + {C:mult}mult and visa versa",
+                    "all playing {C:attention}cards {C:chips}+chips",
+                    "is now + {C:mult}mult{} and visa versa",
                     "{C:inactive}#1#"
                 },
             },            
