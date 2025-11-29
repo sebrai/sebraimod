@@ -23,6 +23,64 @@ function return_JokerValues() -- not used, just here to demonstrate how you coul
     end
 end
 
+-- returns total chips the card *should* contribute according to base + enhancement + edition
+function get_total_card_chips(card)
+    -- 1) get a sensible base chip value (try a few likely fields)
+    local base = 0
+    base = card.chips or base
+
+    -- some cards store base info under card.base or card.base.nominal
+    if base == 0 and card.base and card.base.nominal then
+        -- nominal may be "2".."10","J","Q","K","Ace" etc.
+        local nom = card.base.nominal
+        if type(nom) == "number" then
+            base = nom
+        else
+            if nom == "Ace" or nom == "A" then
+                base = 11
+            elseif nom == "J" or nom == "Q" or nom == "K" then
+                base = 10
+            else
+                local n = tonumber(nom)
+                if n then base = n end
+            end
+        end
+    end
+
+    -- fallback if still zero: some cards put a default chips value under card.ability.chips
+    if base == 0 and card.ability and card.ability.chips then
+        base = card.ability.chips
+    end
+
+    -- 2) enhancement bonuses (common Balatro mapping)
+    if card.ability and card.ability.name then
+        local name = card.ability.name
+        if name == "Bonus" then
+            base = base + 30        -- Bonus card +30 chips (wiki)
+        elseif name == "Stone" then
+            base = base + 50        -- Stone sets +50 (wiki)
+        -- other enhancements that affect chips can be added here
+        end
+    end
+
+    -- 3) edition bonuses (check typical edition flags)
+    if card.edition then
+        -- edition may be a table of flags like { foil=true, gold=true, holographic=true }
+        if card.edition.foil then
+            base = base + 50        -- Foil +50 chips (wiki)
+        end
+        
+    end
+
+    -- 4) mods / jokers may have placed an explicit numeric contribution in ability.extra
+    if card.ability and card.ability.extra and type(card.ability.extra.chips) == "number" then
+        base = base + card.ability.extra.chips
+    end
+
+    return base
+end
+
+
 SMODS.Atlas({
     key = "sample_wee",
     path = "j_sample_wee.png",
@@ -164,11 +222,15 @@ SMODS.Joker{
         if context.individual and context.cardarea == G.play then
             local played = context.other_card
 
-            -- Get the actual chips and mult from the card
-            local base_chips = played.chips or played.ability.chips or 0
+         
+            
             local base_mult  = played.mult  or played.ability.mult  or 0
-
-            -- Swap chips and mult for this scoring
+            local base_chips = get_total_card_chips(played)
+            if played.edition then
+                if played.edition.holographic then
+                        base_mult = base_mult + 10
+                end
+            end
             return {
                 chips = base_mult - base_chips,
                 mult  = base_chips - base_mult
