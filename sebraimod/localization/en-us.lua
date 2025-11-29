@@ -4,7 +4,7 @@ return {
             j_seb_double_trouble = {
                 name = "double trouble",
                 text = {
-                    "doubles this joker {c:chips}chips when a",
+                    "multiplies this jokers chips by {C:chips}#2# when a",
                     "played {C:attention}2{} is scored",
                     "{C:inactive}(Currently {C:chips}+#1#{C:inactive} Chips)",
                 },
