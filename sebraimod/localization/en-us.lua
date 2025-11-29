@@ -12,8 +12,9 @@ return {
             j_seb_switcheroo = {
                 name ="switcheroo",
                 text = {
-                    "swap current {C:chips}chips and {C:mult}mult",
-                    "{C:inactive}(#1#)"
+                    "all playing {C:attention}cards +{C:chips}chips",
+                    "is now + {C:mult}mult and visa versa",
+                    "{C:inactive}#1#"
                 },
             },            
             j_seb_sample_obelisk = {
