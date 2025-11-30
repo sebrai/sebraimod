@@ -12,8 +12,10 @@ return {
             j_seb_switcheroo = {
                 name ="switcheroo",
                 text = {
-                    "all playing {C:attention}cards {C:chips}+chips",
-                    "is now + {C:mult}mult{} and visa versa",
+                    "{C:chips}bonus, stone, foil{}cards and base card rank",
+                    "give {C:mult}+mult{} instead of {C:chips}+chips",
+                    "{C:mult}mult{} and {C:edition}holographic{}cards",
+                    "give {C:chips}+chips{} instead of {C:mult}+mult",
                     "{C:inactive}#1#"
                 },
             },            
