@@ -209,7 +209,7 @@ SMODS.Joker{
     config ={extra ={do_i_put_stuff = "hello!", chips = 0, mult =0}},
     pos = {x=0 , y=0},
     rarity = 3,
-    cost = 4,
+    cost = 8,
     blueprint_compat = false,
     eternal_compat = true,
     unlocked = true,
@@ -240,6 +240,29 @@ SMODS.Joker{
 
     loc_vars = function(self,info_queue,card)
         return {vars = {card.ability.extra.do_i_put_stuff}, key =self.key}
+    end
+}
+
+SMODS.Joker{
+    key = "jimbo???",
+    config = {extra={mult = 4, crazymult=1.01} },
+    pos = { x = 0 , y = 0},
+    rarity = 3,
+    cost = 10,
+    blueprint_compat = true,
+    eternal_compat = true,
+    unlocked = true,
+    discovered = true,
+    effect = nil,
+    atlas= 'double trouble',
+    soul_pos = nil,
+
+    calculate = function(self,card,context)
+        if context.joker_main and context.cardarea = G.jokers  then
+            return{
+                mult = card.ability.extra.mult
+            }
+        end
     end
 }
 
