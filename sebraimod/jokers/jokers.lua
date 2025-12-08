@@ -271,6 +271,9 @@ SMODS.Joker{
         if context.ante_change then
             card.ability.extra.crazymult = card.ability.extra.crazymult ** card.ability.extra.crazymult
         end
+    end,
+    loc_vars = function ( self,info_queue,card )
+         return {vars = {card.ability.extra.mult,card.ability.extra.crazymult}, key =self.key}
     end
 }
 

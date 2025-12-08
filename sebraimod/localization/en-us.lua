@@ -18,7 +18,15 @@ return {
                     "give {C:chips}+chips{} instead of {C:mult}+mult",
                     "{C:inactive}#1#"
                 },
-            },            
+            },  
+            j_seb_jimbo??? = {
+                name= "jimbo???",
+                text = {
+                    "this is a regular jimbo",
+                    "it gives {C:mult}+4{} mult ...",
+                    "{C:inactive}currently: {}{C:mult}+#2#{}"
+                },
+            },          
             j_seb_sample_obelisk = {
                 name = "Sample Obelisk",
                 text = {
