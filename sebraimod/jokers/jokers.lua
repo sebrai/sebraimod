@@ -162,7 +162,12 @@ SMODS.Atlas({
     px = 71,
     py =95,
 })
-
+SMODS.Atlas({
+    key = "seb_jimbo_dot",
+    path = "jimbo_dot.png",
+    px = 71,
+    py = 95,
+})
 
 SMODS.Joker{
     key = "double_trouble",                                  --name used by the joker.    
@@ -253,7 +258,7 @@ SMODS.Joker{
     unlocked = true,
     discovered = true,
     effect = nil,
-    atlas= "sample_wee",
+    atlas= "jimbo_dot",
     soul_pos = nil,
 
     calculate = function(self,card,context)
