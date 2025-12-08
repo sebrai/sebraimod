@@ -253,7 +253,7 @@ SMODS.Joker{
     unlocked = true,
     discovered = true,
     effect = nil,
-    atlas= 'double trouble',
+    atlas= "sample_wee",
     soul_pos = nil,
 
     calculate = function(self,card,context)
