@@ -18,15 +18,15 @@ return {
                     "give {C:chips}+chips{} instead of {C:mult}+mult",
                     "{C:inactive}#1#"
                 },
-            },  
-            j_seb_jimbo??? = {
+            },
+            j_seb_jimbo_dot = {
                 name= "jimbo???",
                 text = {
                     "this is a regular jimbo",
                     "it gives {C:mult}+4{} mult ...",
                     "{C:inactive}currently: {}{C:mult}+#2#{}"
                 },
-            },          
+            },
             j_seb_sample_obelisk = {
                 name = "Sample Obelisk",
                 text = {
@@ -124,7 +124,7 @@ return {
     },
     misc = {
 
-            -- do note that when using messages such as: 
+            -- do note that when using messages such as:
             -- message = localize{type='variable',key='a_xmult',vars={current_xmult}},
             -- that the key 'a_xmult' will use provided values from vars={} in that order to replace #1#, #2# etc... in the localization file.
 

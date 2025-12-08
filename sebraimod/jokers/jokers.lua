@@ -183,7 +183,6 @@ SMODS.Joker{
             if not context.blueprint then -- blueprint/brainstorm don't get to add chips to themselves
                 if context.other_card:get_id() == 2 then -- played card is a 2 by rank
                     card.ability.extra.chips = card.ability.extra.chips * card.ability.extra.x_chip -- add configurable amount of chips to joker
-                    
                     return {                             -- shows a message under the specified card (card) when it triggers, k_upgrade_ex is a key in the localization files of Balatro
                         extra = {focus = card, message = localize('k_upgrade_ex')},
                         card = card,
@@ -244,7 +243,7 @@ SMODS.Joker{
 }
 
 SMODS.Joker{
-    key = "jimbo???",
+    key = "jimbo_dot",
     config = {extra={mult = 4, crazymult=1.3} },
     pos = { x = 0 , y = 0},
     rarity = 3,
@@ -258,7 +257,7 @@ SMODS.Joker{
     soul_pos = nil,
 
     calculate = function(self,card,context)
-        if context.joker_main and context.cardarea = G.jokers  then
+        if context.joker_main and context.cardarea == G.jokers  then
             if math.random(1,4) == 1 then
                 return{
                 mult = card.ability.extra.crazymult 
@@ -269,7 +268,7 @@ SMODS.Joker{
             }
         end
         if context.ante_change then
-            card.ability.extra.crazymult = card.ability.extra.crazymult ** card.ability.extra.crazymult
+            card.ability.extra.crazymult = card.ability.extra.crazymult ^ card.ability.extra.crazymult
         end
     end,
     loc_vars = function ( self,info_queue,card )
