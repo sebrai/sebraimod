@@ -245,7 +245,7 @@ SMODS.Joker{
 
 SMODS.Joker{
     key = "jimbo???",
-    config = {extra={mult = 4, crazymult=1.01} },
+    config = {extra={mult = 4, crazymult=1.3} },
     pos = { x = 0 , y = 0},
     rarity = 3,
     cost = 10,
@@ -259,9 +259,17 @@ SMODS.Joker{
 
     calculate = function(self,card,context)
         if context.joker_main and context.cardarea = G.jokers  then
+            if math.random(1,4) == 1 then
+                return{
+                mult = card.ability.extra.crazymult 
+                }
+            end
             return{
                 mult = card.ability.extra.mult
             }
+        end
+        if context.ante_change then
+            card.ability.extra.crazymult = card.ability.extra.crazymult ** card.ability.extra.crazymult
         end
     end
 }
