@@ -178,7 +178,7 @@ SMODS.Joker{
     blueprint_compat=true,                               --does joker work with blueprint.
     eternal_compat=true,                                 --can joker be eternal.
     unlocked = true,                                     --is joker unlocked by default.
-    discovered = true,                                   --is joker discovered by default.    
+    discovered = true,                                   --is joker discovered by default.
     effect=nil,                                          --you can specify an effect here eg. 'Mult'
     soul_pos=nil,                                        --pos of a soul sprite.
     atlas = 'double_trouble',                                --atlas name, single sprites are deprecated.
@@ -226,8 +226,7 @@ SMODS.Joker{
         if context.individual and context.cardarea == G.play then
             local played = context.other_card
 
-         
-            
+
             local base_mult  = played.mult  or played.ability.mult  or 0
             local base_chips = get_total_card_chips(played)
             if played.edition then
@@ -279,6 +278,20 @@ SMODS.Joker{
     loc_vars = function ( self,info_queue,card )
          return {vars = {card.ability.extra.mult,card.ability.extra.crazymult}, key =self.key}
     end
+}
+SMODS.Joker{
+key = "funny_joker",
+config ={extra={x_mult = 1.5}},
+pos = {x=0,y=0},
+rarity = 1,
+cost = 3,
+blueprint_compat = true,
+eternal_compat = true,
+unlocked = true,
+discovered = true,
+effect = nil,
+soul_pos = nil,
+
 }
 
 SMODS.Joker{
