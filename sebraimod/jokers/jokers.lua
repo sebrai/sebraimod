@@ -180,7 +180,12 @@ SMODS.Atlas({
     px = 71,
     py = 95,
 })
-
+SMODS.Atlas({
+    key = 'seb_loker_pot',
+    path = 'money_pot.png',
+    px =71,
+    py = 95,
+})
 SMODS.Joker{
     key = "double_trouble",                                  --name used by the joker.    
     config = { extra = { chips = 1, x_chip = 1.2 } },    --variables used for abilities and effects.
@@ -414,7 +419,7 @@ SMODS.Joker{
 }
 
 SMODS.Joker{
-    key = "sample_money",
+    key = "loker_pot",
     config={ },
     pos = { x = 0, y = 0 },
     rarity = 1,
@@ -424,12 +429,12 @@ SMODS.Joker{
     unlocked = true,
     discovered = true,
     effect = nil,
-    atlas = 'sample_money',
+    atlas = 'loker_pot',
     soul_pos = nil,
 
     calculate = function(self, card, context)
         if context.end_of_round and not (context.individual or context.repetition) then --and not (context.individual or context.repetition) => make sure doesn't activate on every card like gold cards.
-            ease_dollars(G.GAME.round_resets.blind_ante*2) -- ease_dollars adds or removes provided amount of money. (-5 would remove 5 for example)
+            ease_dollars(G.GAME.round_resets.blind_ante^2) -- ease_dollars adds or removes provided amount of money. (-5 would remove 5 for example)
         end
     end,
     loc_vars = function(self, info_queue, card)

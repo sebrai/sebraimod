@@ -59,17 +59,12 @@ return {
                     }
                 },
             },
-            j_seb_sample_money = {
-                name = "Sample Money",
+            j_seb_loker_pot = {
+                name = "loker pot",
                 text = {
                     {
-                        "Earn (Ante x 2) {C:money}${} at",
-                        "end of round, also here's some text effects:",
-                        "{C:money} money{}, {C:chips} chips{}, {C:mult} mult{}, {C:red} red{}, {C:blue} blue{}, {C:green} green{}",
-                        "{C:attention} attention{}, {C:purple} purple{}, {C:inactive} inactive{}",
-                        "{C:spades} spades{}, {C:hearts} hearts{}, {C:clubs} clubs{}, {C:diamonds} diamonds{}",
-                        "{C:tarot} tarot{}, {C:planet} planet{}, {C:spectral} spectral{}",
-                        "{C:edition} edition{}, {C:dark_edition} dark edition{}, {C:legendary} legendary{}, {C:enhanced} enhanced{}",
+                        "Earn (Ante^2) {C:money}${} at",
+                        "end of round"
                     }
                 },
             },
