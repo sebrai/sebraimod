@@ -69,13 +69,15 @@ return {
                 },
             },
             j_seb_sample_roomba = {
-                name = "Sample Roomba",
+                name = "romba",
                 text = {
                     {
                         "Attempts to remove edition",
                         "from another Joker",
                         "at the end of each round",
-                        "{C:inactive}(Foil, Holo, Polychrome)"
+                        "{C:inactive}(Foil, Holo, Polychrome)",
+                        "if succesful gains{X:mult,C:white} 1 x mult{} ",
+                        "{C:inactive}(Currently {C:mult}+#1#{C:inactive} mult)",
                     }
                 },
             },

@@ -111,7 +111,7 @@ SMODS.Atlas({
 
 SMODS.Atlas({
     key = "sample_roomba",
-    path = "j_sample_roomba.png",
+    path = "j_good_roomba.png",
     px = 71,
     py = 95
 })
@@ -371,7 +371,6 @@ SMODS.Joker{
         if context.joker_main and context.cardarea == G.jokers and context.scoring_name then
             local current_hand_times = (G.GAME.hands[context.scoring_name].played or 0) -- how many times has the player played the current type of hand. (pair, two pair. etc..)
             local current_xmult = 1 + (current_hand_times * card.ability.extra.x_mult)
-            
             return {
                 message = localize{type='variable',key='a_xmult',vars={current_xmult}},
                 colour = G.C.RED,
@@ -444,10 +443,10 @@ SMODS.Joker{
 
 SMODS.Joker{
     key = "sample_roomba",
-    config={ },
+    config={ extra = {x_mult = 1.5}},
     pos = { x = 0, y = 0 },
     rarity = 2,
-    cost = 4,
+    cost = 5,
     blueprint_compat = true,
     eternal_compat = false,
     unlocked = true,
@@ -473,14 +472,20 @@ SMODS.Joker{
                 if(joker_to_clean.edition) then --if joker has an edition
                     if not joker_to_clean.edition.negative then --if joker is not negative
                         joker_to_clean:set_edition(nil) -- clean the joker from it's edition
+                        card.ability.extra.x_mult = card.ability.extra.x_mult + 1
                     end
                 end
             end
         end
+        if context.joker_main and context.cardarea == G.jokers then
+            return{
+                x_mult = card.ability.extra.x_mult
+            }
+        end
     end,
 
     loc_vars = function(self, info_queue, card)
-        return { }
+        return {vars = {card.ability.extra.x_mult},key = self.key}
     end
 }
 
