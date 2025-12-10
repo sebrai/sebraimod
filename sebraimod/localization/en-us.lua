@@ -27,6 +27,13 @@ return {
                     "{C:inactive}currently: {}{C:mult}+#2#{}"
                 },
             },
+            j_seb_funny_joker = {
+                name= "funny joker",
+                text = {
+                    "this joker gives",
+                    "{X:mult,C:white} X#1# {}"
+                },
+            },
             j_seb_sample_obelisk = {
                 name = "Sample Obelisk",
                 text = {
