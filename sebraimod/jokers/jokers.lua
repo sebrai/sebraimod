@@ -176,10 +176,11 @@ SMODS.Atlas({
 })
 SMODS.Atlas({
     key = 'seb_red_joker',
-    path = 'red_joker',
+    path = 'red_joker.png',
     px = 71,
     py = 95,
 })
+
 SMODS.Joker{
     key = "double_trouble",                                  --name used by the joker.    
     config = { extra = { chips = 1, x_chip = 1.2 } },    --variables used for abilities and effects.
@@ -323,7 +324,7 @@ key = "red_joker",
 config ={extra={mult = 4,chips= 23.2}},
 pos = {x=0,y=0},
 rarity = 1,
-cost = 6,
+cost = 3,
 blueprint_compat = true,
 eternal_compat = true,
 unlocked = true,
