@@ -34,6 +34,13 @@ return {
                     "{X:mult,C:white} X#1# {}"
                 },
             },
+            j_seb_red_joker = {
+                name = "red joker",
+                text = {
+                    "this joker gives {C:mult}+#1#{} mult",
+                    "and {C:chips}+#2#{} when scored"
+                }
+            },
             j_seb_sample_obelisk = {
                 name = "Sample Obelisk",
                 text = {

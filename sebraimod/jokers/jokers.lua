@@ -174,6 +174,12 @@ SMODS.Atlas({
     px = 71,
     py = 95,
 })
+SMODS.Atlas({
+    key = 'seb_red_joker',
+    path = 'red_joker',
+    px = 71,
+    py = 95,
+})
 SMODS.Joker{
     key = "double_trouble",                                  --name used by the joker.    
     config = { extra = { chips = 1, x_chip = 1.2 } },    --variables used for abilities and effects.
@@ -308,6 +314,35 @@ calculate = function ( self,card,context )
 end,
 loc_vars = function ( self,info_queue,card )
     return {vars = {card.ability.extra.x_mult},key = self.key}
+end
+
+}
+
+SMODS.Joker{
+key = "red_joker",
+config ={extra={mult = 4,chips= 23.2}},
+pos = {x=0,y=0},
+rarity = 1,
+cost = 6,
+blueprint_compat = true,
+eternal_compat = true,
+unlocked = true,
+discovered = true,
+effect = nil,
+soul_pos = nil,
+atlas = 'red_joker',
+
+calculate = function ( self,card,context )
+    if context.joker_main and context.cardarea == G.jokers  then
+        return {
+            mult = card.ability.extra.mult,
+            chips = card.ability.extra.chips
+        }
+    end
+
+end,
+loc_vars = function ( self,info_queue,card )
+    return {vars = {card.ability.extra.mult,card.ability.extra.chips},key = self.key}
 end
 
 }
