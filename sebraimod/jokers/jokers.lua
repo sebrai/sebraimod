@@ -111,7 +111,7 @@ SMODS.Atlas({
 
 SMODS.Atlas({
     key = "sample_roomba",
-    path = "j_good_roomba.png",
+    path = "good_romba.png",
     px = 71,
     py = 95
 })
