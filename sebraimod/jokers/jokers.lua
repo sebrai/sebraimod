@@ -168,7 +168,12 @@ SMODS.Atlas({
     px = 71,
     py = 95,
 })
-
+Smods.Atlas({
+    key = "seb_funny_joker",
+    path = "funny_joker.png",
+    px = 71,
+    py = 95,
+})
 SMODS.Joker{
     key = "double_trouble",                                  --name used by the joker.    
     config = { extra = { chips = 1, x_chip = 1.2 } },    --variables used for abilities and effects.
@@ -291,6 +296,21 @@ unlocked = true,
 discovered = true,
 effect = nil,
 soul_pos = nil,
+atlas = 'funny_joker',
+
+calculate = function ( self,card,context )
+    if context.joker_main and context.cardarea == G.jokers  then
+        return {
+            message = localize{type='variable',key='a_xmult',vars={current_xmult}},
+            colour = G.C.RED,
+            x_mult = card.ability.extra.x_mult
+        }
+    end
+
+end,
+loc_vars = function ( self,info_queue,card )
+    return {vars = {card.ability.extra.x_mult},key = self.key}
+end
 
 }
 
