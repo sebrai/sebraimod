@@ -168,7 +168,7 @@ SMODS.Atlas({
     px = 71,
     py = 95,
 })
-Smods.Atlas({
+SMODS.Atlas({
     key = "seb_funny_joker",
     path = "funny_joker.png",
     px = 71,
@@ -301,8 +301,6 @@ atlas = 'funny_joker',
 calculate = function ( self,card,context )
     if context.joker_main and context.cardarea == G.jokers  then
         return {
-            message = localize{type='variable',key='a_xmult',vars={current_xmult}},
-            colour = G.C.RED,
             x_mult = card.ability.extra.x_mult
         }
     end
