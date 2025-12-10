@@ -608,32 +608,32 @@ SMODS.Joker{
     end
 }
 
-SMODS.Joker{
-    key = "sample_multieffect",
-    config = { extra = { chips = 10, mult = 10, x_mult = 2 } },
-    pos = { x = 0, y = 0 },
-    rarity = 2,
-    cost = 4,
-    blueprint_compat = true,
-    eternal_compat = false,
-    unlocked = true,
-    discovered = true,
-    effect = nil,
-    atlas = 'sample_multieffect',
-    soul_pos = nil,
+-- SMODS.Joker{
+--     key = "sample_multieffect",
+--     config = { extra = { chips = 10, mult = 10, x_mult = 2 } },
+--     pos = { x = 0, y = 0 },
+--     rarity = 2,
+--     cost = 4,
+--     blueprint_compat = true,
+--     eternal_compat = false,
+--     unlocked = true,
+--     discovered = true,
+--     effect = nil,
+--     atlas = 'sample_multieffect',
+--     soul_pos = nil,
 
-    calculate = function(self, card, context)
-        if context.individual and context.cardarea == G.play and context.other_card:get_id() == 10 then
-            return {
-                chips = card.ability.extra.chips,
-                mult = card.ability.extra.mult,
-                x_mult = card.ability.extra.x_mult,
-                card = self
-            }
-        end
-    end,
+--     calculate = function(self, card, context)
+--         if context.individual and context.cardarea == G.play and context.other_card:get_id() == 10 then
+--             return {
+--                 chips = card.ability.extra.chips,
+--                 mult = card.ability.extra.mult,
+--                 x_mult = card.ability.extra.x_mult,
+--                 card = self
+--             }
+--         end
+--     end,
 
-    loc_vars = function(self, info_queue, card)
-        return { vars = { card.ability.extra.chips, card.ability.extra.mult }, key = self.key }
-    end
-}
+--     loc_vars = function(self, info_queue, card)
+--         return { vars = { card.ability.extra.chips, card.ability.extra.mult }, key = self.key }
+--     end
+-- }
