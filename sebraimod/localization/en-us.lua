@@ -60,7 +60,7 @@ return {
                 },
             },
             j_seb_loker_pot = {
-                name = "loker pot",
+                name = "Loker pot",
                 text = {
                     {
                         "Earn (Ante^2) {C:money}${} at",
@@ -76,8 +76,8 @@ return {
                         "from another Joker",
                         "at the end of each round",
                         "{C:inactive}(Foil, Holo, Polychrome)",
-                        "if succesful gains{X:mult,C:white} 1 x mult{} ",
-                        "{C:inactive}(Currently {C:mult}+#1#{C:inactive} mult)",
+                        "if succesful gains {X:mult,C:white} 1 x{} mult ",
+                        "{C:inactive}(Currently {X:mult,C:white}x#1#{C:inactive} mult)",
                     }
                 },
             },
