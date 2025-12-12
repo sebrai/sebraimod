@@ -186,6 +186,12 @@ SMODS.Atlas({
     px =71,
     py = 95,
 })
+SMODS.Atlas({
+    key= 'seb_tuning_fork',
+    path ='tuning_fork.png',
+    px =71,
+    py= 95,
+})
 SMODS.Joker{
     key = "double_trouble",                                  --name used by the joker.
     config = { extra = { chips = 1, x_chip = 1.2 } },    --variables used for abilities and effects.
@@ -364,7 +370,7 @@ SMODS.Joker{
     unlocked = true,
     discovered = true,
     effect = nil,
-    atlas = 'sample_obelisk',
+    atlas = 'tuning_fork',
     soul_pos = nil,
 
     calculate = function(self, card, context)
@@ -512,76 +518,76 @@ SMODS.Joker{
     end
 }
 
-SMODS.Joker{
-    key = "sample_hackerman",
-    config = { repetitions = 1 },
-    pos = { x = 0, y = 0 },
-    rarity = 2,
-    cost = 4,
-    blueprint_compat = true,
-    eternal_compat = false,
-    unlocked = true,
-    discovered = true,
-    effect = nil,
-    atlas = 'sample_hackerman',
-    soul_pos = nil,
+-- SMODS.Joker{
+--     key = "sample_hackerman",
+--     config = { repetitions = 1 },
+--     pos = { x = 0, y = 0 },
+--     rarity = 2,
+--     cost = 4,
+--     blueprint_compat = true,
+--     eternal_compat = false,
+--     unlocked = true,
+--     discovered = true,
+--     effect = nil,
+--     atlas = 'sample_hackerman',
+--     soul_pos = nil,
 
-    calculate = function(self, card, context)
-        if context.cardarea == G.play and context.repetition and (
-            context.other_card:get_id() == 6 or 
-            context.other_card:get_id() == 7 or 
-            context.other_card:get_id() == 8 or 
-            context.other_card:get_id() == 9) then
-            return {
-                message = localize('k_again_ex'),
-                repetitions = card.ability.repetitions,
-                card = self
-            }
-        end
-    end,
+--     calculate = function(self, card, context)
+--         if context.cardarea == G.play and context.repetition and (
+--             context.other_card:get_id() == 6 or 
+--             context.other_card:get_id() == 7 or 
+--             context.other_card:get_id() == 8 or 
+--             context.other_card:get_id() == 9) then
+--             return {
+--                 message = localize('k_again_ex'),
+--                 repetitions = card.ability.repetitions,
+--                 card = self
+--             }
+--         end
+--     end,
 
-    loc_vars = function(self, info_queue, card)
-        return { }
-    end
-}
+--     loc_vars = function(self, info_queue, card)
+--         return { }
+--     end
+-- }
 
-SMODS.Joker{
-    key = "sample_baroness",
-    config = { extra = { x_mult = 1.5 } },
-    pos = { x = 0, y = 0 },
-    rarity = 3,
-    cost = 8,
-    blueprint_compat = true,
-    eternal_compat = false,
-    unlocked = true,
-    discovered = true,
-    effect = nil,
-    atlas = 'sample_baroness',
-    soul_pos = nil,
+-- SMODS.Joker{
+--     key = "sample_baroness",
+--     config = { extra = { x_mult = 1.5 } },
+--     pos = { x = 0, y = 0 },
+--     rarity = 3,
+--     cost = 8,
+--     blueprint_compat = true,
+--     eternal_compat = false,
+--     unlocked = true,
+--     discovered = true,
+--     effect = nil,
+--     atlas = 'sample_baroness',
+--     soul_pos = nil,
 
-    calculate = function(self, card, context)
-        if not context.end_of_round then
-            if context.cardarea == G.hand and context.individual and context.other_card:get_id() == 12 then
-                if context.other_card.debuff then
-                    return {
-                        message = localize('k_debuffed'),
-                        colour = G.C.RED,
-                        card = self,
-                    }
-                else
-                    return {
-                        x_mult = card.ability.extra.x_mult,
-                        card = self
-                    }
-                end
-            end
-        end
-    end,
+--     calculate = function(self, card, context)
+--         if not context.end_of_round then
+--             if context.cardarea == G.hand and context.individual and context.other_card:get_id() == 12 then
+--                 if context.other_card.debuff then
+--                     return {
+--                         message = localize('k_debuffed'),
+--                         colour = G.C.RED,
+--                         card = self,
+--                     }
+--                 else
+--                     return {
+--                         x_mult = card.ability.extra.x_mult,
+--                         card = self
+--                     }
+--                 end
+--             end
+--         end
+--     end,
 
-    loc_vars = function(self, info_queue, card)
-        return { vars = { card.ability.extra.x_mult } }
-    end
-}
+--     loc_vars = function(self, info_queue, card)
+--         return { vars = { card.ability.extra.x_mult } }
+--     end
+-- }
 
 SMODS.Joker{
     key = "sample_rarebaseballcard",

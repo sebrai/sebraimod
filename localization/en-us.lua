@@ -42,7 +42,7 @@ return {
                 }
             },
             j_seb_sample_obelisk = {
-                name = "Sample Obelisk",
+                name = "tuning fork",
                 text = {
                     {
                         "This Joker gives {X:mult,C:white} X#1# {} Mult",
@@ -113,7 +113,7 @@ return {
                 },
             },
             j_seb_sample_rarebaseballcard = {
-                name = "Sample Rare Baseball Card",
+                name = "Baseball Card(limited samples)",
                 text = {
                     {
                         "{X:mult,C:white}Rare{} Jokers",
