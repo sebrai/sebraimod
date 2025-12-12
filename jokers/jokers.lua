@@ -187,7 +187,7 @@ SMODS.Atlas({
     py = 95,
 })
 SMODS.Joker{
-    key = "double_trouble",                                  --name used by the joker.    
+    key = "double_trouble",                                  --name used by the joker.
     config = { extra = { chips = 1, x_chip = 1.2 } },    --variables used for abilities and effects.
     pos = { x = 0, y = 0 },                              --pos in spritesheet 0,0 for single sprites or the first sprite in the spritesheet.
     rarity = 2,                                          --rarity 1=common, 2=uncommen, 3=rare, 4=legendary
